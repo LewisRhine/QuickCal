@@ -45,4 +45,36 @@ public class MonthViewPagerAdapterTest {
 
     }
 
+    @Test
+    public void markDateTest(){
+        
+        //check to make sure size is right
+        monthViewPageAdapter.markDate(new Date());
+        assertEquals("makred days size is off" 1, monthViewPagerAdapter.getMarkedDates.size);
+        
+        monthViewPageAdapter.markDate(new Date());
+        monthViewPageAdapter.markDate(new Date());
+        monthViewPageAdapter.markDate(new Date());
+
+        assertEquals("makred days size is off" 4, monthViewPagerAdapter.getMarkedDates.size);
+        
+        //Mark Today
+        Date today = new Date();
+        
+        monthViewPageAdapter.markDate(today);
+        
+        assertEquals("date is wrong", today, monthViewPageAdapter.getMarkedDates.get(4);
+
+        //pass date outside of clander range.
+                
+
+        //pass null date
+        Date nullDate = null;
+        
+        monthViewPageAdapter.markDate(nullDate);
+        
+        assertEquals("null date was added to list" 5, monthViewPagerAdapter.getMarkedDates.size);
+        
+    }
+    }
 }
