@@ -85,5 +85,42 @@ public class monthViewAdapterTest {
     public void getViewTest(){
 
     }
+    
+    @Test
+    public void markDateTest(){
+    
+    //passing a list.
+    List<Date> markedDates = new arrayList<>;
+    
+    markedDates.add(new Date());
+    markedDates.add(new Date());
+    markedDates.add(new Date());
+    markedDates.add(new Date());
+
+    
+    monthViewAdapter.markDate(markedDates);
+    
+    //check size
+    assertEquals("size of marked dates is wrong", markedDats.size, monthViewAdapter.getMarkedDates.size);
+    
+    //check object
+    assertEquals("objects are not same", markedDats.get(3), monthViewAdapter.getMarkedDates.get(3);
+        
+    }
+    
+    //chack null
+    
+    //--------------------------
+    
+    //Check single date pram
+    Date markedDate = new Date();
+    
+    monthAdapter.markDate(markedDate);
+    
+    assertEquals("objects are wrong", date.getTime, monthViewAdapter.getMarked.size);
+
+    
+    
+    
 
 }
